@@ -13,9 +13,9 @@ if [ "x${ECS_ENV}" != "x" ]; then
 fi
 
 AWS_REGION="--region us-east-1"
-SERVICE_NAME="stg-dummy"
-TASK_FAMILY="stg-dummy-taskdef"
-ECS_CLUSTER="stg-dummy"
+SERVICE_NAME="stg-fork-be"
+TASK_FAMILY="stg-fork-be-taskdef"
+ECS_CLUSTER="stg-fork"
 SCRIPT_DIR=$(dirname $0)
 
 # Create a new task definition for this build
