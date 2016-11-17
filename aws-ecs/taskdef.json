@@ -1,5 +1,5 @@
 {
-  "family": "Fork-taskdef",
+  "family": "stg-fork-be-taskdef",
   "containerDefinitions": [
     {
       "volumesFrom": [],
@@ -15,7 +15,7 @@
       "mountPoints": [],
       "name": "Fork",
       "environment": [],
-      "image": "662624883544.dkr.ecr.us-east-1.amazonaws.com/fork-un-server:latest",
+      "image": "662624883544.dkr.ecr.us-east-1.amazonaws.com/stg-fork-be:latest",
       "cpu": 1024
     }
   ]
