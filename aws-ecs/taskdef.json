@@ -5,15 +5,15 @@
       "name": "com.amazonaws.ecs.capability.ecr-auth"
     }
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:662624883544:task-definition/stg-dummy-taskdef:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:662624883544:task-definition/fork-taskdef:2",
   "networkMode": "bridge",
   "status": "ACTIVE",
-  "revision": 1,
+  "revision": 2,
   "taskRoleArn": null,
   "containerDefinitions": [
     {
       "volumesFrom": [],
-      "memory": 256,
+      "memory": 512,
       "extraHosts": null,
       "dnsServers": null,
       "disableNetworking": null,
@@ -29,7 +29,7 @@
       "essential": true,
       "entryPoint": null,
       "mountPoints": [],
-      "name": "dummy",
+      "name": "fork",
       "ulimits": null,
       "dockerSecurityOptions": null,
       "environment": [],
@@ -47,5 +47,5 @@
     }
   ],
   "volumes": [],
-  "family": "stg-dummy-taskdef"
+  "family": "fork-taskdef"
 }
