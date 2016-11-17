@@ -15,7 +15,7 @@ fi
 AWS_REGION="--region us-east-1"
 SERVICE_NAME="${PREFIX}fork-be"
 TASK_FAMILY="${PREFIX}fork-be-taskdef"
-ECS_CLUSTER="${PREFIX}fork-be"
+ECS_CLUSTER="${PREFIX}fork"
 SCRIPT_DIR=$(dirname $0)
 
 # Create a new task definition for this build
