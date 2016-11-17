@@ -3,7 +3,7 @@
 while getopts e: opt; do
   case $opt in
     e)
-      ECS_ENV=$OPTARG
+      ECS_ENV=stg
       ;;
   esac
 done
