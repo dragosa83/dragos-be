@@ -3,7 +3,7 @@
 while getopts e: opt; do
   case $opt in
     e)
-      ECS_ENV=stg
+      ECS_ENV=$OPTARG
       ;;
   esac
 done
@@ -13,13 +13,13 @@ if [ "x${ECS_ENV}" != "x" ]; then
 fi
 
 AWS_REGION="--region us-east-1"
-SERVICE_NAME="stg-fork-be"
-TASK_FAMILY="stg-fork-be-taskdef"
-ECS_CLUSTER="stg-fork"
+SERVICE_NAME="${PREFIX}fork-be"
+TASK_FAMILY="${PREFIX}fork-be-taskdef"
+ECS_CLUSTER="${PREFIX}fork-be"
 SCRIPT_DIR=$(dirname $0)
 
 # Create a new task definition for this build
-aws ecs register-task-definition ${AWS_REGION} --family ${TASK_FAMILY} --cli-input-json file://${SCRIPT_DIR}/stg-dummy-taskdef.json
+aws ecs register-task-definition ${AWS_REGION} --family ${TASK_FAMILY} --cli-input-json file://${SCRIPT_DIR}/${PREFIX}taskdef.json
 
 # Update the service with the new task definition and desired count
 TASK_REVISION=`aws ecs describe-task-definition ${AWS_REGION} --task-definition ${TASK_FAMILY} | egrep "revision" | tr "/" " " | awk '{print $2}' | sed 's/"$//'`
