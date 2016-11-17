@@ -1,23 +1,9 @@
 {
-  "requiresAttributes": [
-    {
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    }
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:662624883544:task-definition/fork-taskdef:2",
-  "networkMode": "bridge",
-  "status": "ACTIVE",
-  "revision": 2,
-  "taskRoleArn": null,
+  "family": "Fork-taskdef",
   "containerDefinitions": [
     {
       "volumesFrom": [],
       "memory": 512,
-      "extraHosts": null,
-      "dnsServers": null,
-      "disableNetworking": null,
-      "dnsSearchDomains": null,
       "portMappings": [
         {
           "hostPort": 0,
@@ -25,27 +11,12 @@
           "protocol": "tcp"
         }
       ],
-      "hostname": null,
       "essential": true,
-      "entryPoint": null,
       "mountPoints": [],
-      "name": "fork",
-      "ulimits": null,
-      "dockerSecurityOptions": null,
+      "name": "Fork",
       "environment": [],
-      "links": null,
-      "workingDirectory": null,
-      "readonlyRootFilesystem": null,
       "image": "662624883544.dkr.ecr.us-east-1.amazonaws.com/fork-un-server:latest",
-      "command": null,
-      "user": null,
-      "dockerLabels": null,
-      "logConfiguration": null,
-      "cpu": 1024,
-      "privileged": null,
-      "memoryReservation": null
+      "cpu": 1024
     }
-  ],
-  "volumes": [],
-  "family": "fork-taskdef"
+  ]
 }
