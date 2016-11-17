@@ -19,7 +19,7 @@ ECS_CLUSTER="stg-dummy"
 SCRIPT_DIR=$(dirname $0)
 
 # Create a new task definition for this build
-aws ecs register-task-definition ${AWS_REGION} --family ${TASK_FAMILY} --cli-input-json file://${SCRIPT_DIR}/${PREFIX}taskdef.json
+aws ecs register-task-definition ${AWS_REGION} --family ${TASK_FAMILY} --cli-input-json file://${SCRIPT_DIR}/stg-dummy-taskdef.json
 
 # Update the service with the new task definition and desired count
 TASK_REVISION=`aws ecs describe-task-definition ${AWS_REGION} --task-definition ${TASK_FAMILY} | egrep "revision" | tr "/" " " | awk '{print $2}' | sed 's/"$//'`
