@@ -1,0 +1,51 @@
+{
+  "requiresAttributes": [
+    {
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    }
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:662624883544:task-definition/stg-dummy-taskdef:1",
+  "networkMode": "bridge",
+  "status": "ACTIVE",
+  "revision": 1,
+  "taskRoleArn": null,
+  "containerDefinitions": [
+    {
+      "volumesFrom": [],
+      "memory": 256,
+      "extraHosts": null,
+      "dnsServers": null,
+      "disableNetworking": null,
+      "dnsSearchDomains": null,
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "hostname": null,
+      "essential": true,
+      "entryPoint": null,
+      "mountPoints": [],
+      "name": "dummy",
+      "ulimits": null,
+      "dockerSecurityOptions": null,
+      "environment": [],
+      "links": null,
+      "workingDirectory": null,
+      "readonlyRootFilesystem": null,
+      "image": "662624883544.dkr.ecr.us-east-1.amazonaws.com/fork-un-server:latest",
+      "command": null,
+      "user": null,
+      "dockerLabels": null,
+      "logConfiguration": null,
+      "cpu": 1024,
+      "privileged": null,
+      "memoryReservation": null
+    }
+  ],
+  "volumes": [],
+  "family": "stg-dummy-taskdef"
+}
