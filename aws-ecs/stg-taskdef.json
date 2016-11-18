@@ -14,7 +14,16 @@
       "essential": true,
       "mountPoints": [],
       "name": "Fork",
-      "environment": [],
+      "environment": [
+        {
+          "name": "redis_queue",
+          "value": "stg-redis.pj9pbo.ng.0001.use1.cache.amazonaws.com:6379"
+        },
+        {
+          "name": "redis_queue_name",
+          "value": ""
+        }
+      ],
       "image": "662624883544.dkr.ecr.us-east-1.amazonaws.com/stg-fork-be:latest",
       "cpu": 1024
     }
