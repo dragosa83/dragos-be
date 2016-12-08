@@ -3,7 +3,7 @@ import sys
 import time
 import redis
 
-redis_host = 'stg-redis-002.pj9pbo.0001.use1.cache.amazonaws.com'
+redis_host = 'redis_queue'
 redis_queue_name = 'queue'
 
 r = redis.StrictRedis(host=redis_host)
